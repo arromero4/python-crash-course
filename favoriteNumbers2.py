@@ -1,4 +1,4 @@
-favorite = {
+favoriteNumber = {
     'Melissa': [26, 7, 22],
     'Gian': [22,4,26],
     'Karen': [9,12,14],
@@ -6,4 +6,7 @@ favorite = {
     'Leticia': [28,52]
     }
 
-print(favorite['Melissa'])
+for name, favorite in favoriteNumber.items():
+    print(f"{name} favorite number:")
+    for numbers in favorite:
+        print(numbers)
