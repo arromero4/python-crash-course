@@ -1,19 +1,22 @@
 class Dog:
 
-    """A simple attempt to model a dog."""
-
+    """Un ejemplo con un perrito"""
+    #metodos de la clase
     def __init__(self, name, age):
-        """Initialize name and age attributes."""
+        """Se inician el nombre y la edad del perriro"""
         self.name = name
         self.age = age
     def sit(self):
-        """Simulate a dog sitting in response to a command."""
+        """Simula el comando para que el perrito se siente"""
         print(f"{self.name} is now sitting.")
     
     def roll_over(self):
-        """Simulate rolling over in response to a command."""
+        """Simula una orden para que el perrito gire"""
         print(f"{self.name} rolled over!")
     
 my_dog = Dog('Willie', 6)
-print(f"My dog's name is {my_dog.name}.")
-print(f"My dog is {my_dog.age} years old.")
+print(f"Mi perrito se llama: {my_dog.name}.")
+print(f"La edad de mi perrito es: {my_dog.age}.")
+
+my_dog.sit()
+my_dog.roll_over()
