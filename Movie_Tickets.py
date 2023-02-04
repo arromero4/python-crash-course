@@ -1,3 +1,4 @@
+"""Tickets for the movie"""
 question = "Please enter your age: "
 question += "\nEnter '0' when you are finished."
 
