@@ -1,3 +1,4 @@
+#practice with Slice
 tracks = ['Belgica','Las Vegas','Austria','Silverstone','Mexico','Austin','Bahrain']
 print("The ﬁrst three items in the list are:")
 print(tracks[0:3])

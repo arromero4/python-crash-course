@@ -1,3 +1,4 @@
+"""ejemplo con diccionarios"
 cities = {
     'CDMX' : {
       'country': 'Mexico',
