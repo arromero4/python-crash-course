@@ -22,7 +22,24 @@ class Restaurant:
         """Allow user to increment the number of customers served."""
         self.number_served += number_served
 
+class IceCreamStand(Restaurant):
+    """Inherits from Restaurant"""
+    def __init__(self, restaurant_name, cuisine_type='ice_cream'):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
 
+    def ice_Cream_Flavors(self):
+        print(f"Hay estos sabores de helado: ")
+        for flavor in self.flavors:
+            print(f"- {flavor.title()}")
+
+
+#instance for IceCreamStand
+icecream = IceCreamStand('the gelatto king')
+icecream.flavors = ['chocolate', 'vanilla','strawberry']
+
+icecream.describe_restaurant()
+icecream.ice_Cream_Flavors()
 
 # restaurant_1 = Restaurant("Liru Cisar", "Italian food")
 # restaurant_2 = Restaurant("Taquearte", "Mexican food")
@@ -37,15 +54,15 @@ class Restaurant:
 # restaurant_3.describe_restaurant()
 # restaurant_3.open_restaurant()
 
-restaurant = Restaurant('the mean queen', 'pizza')
-restaurant.describe_restaurant()
+# restaurant = Restaurant('the mean queen', 'pizza')
+# restaurant.describe_restaurant()
 
 
-restaurant.number_served = 430
-print(f"Number served: {restaurant.number_served}")
+# restaurant.number_served = 430
+# print(f"Number served: {restaurant.number_served}")
 
-restaurant.set_number_served(500)
-print(f"Number that has been served: {restaurant.number_served}")
+# restaurant.set_number_served(500)
+# print(f"Number that has been served: {restaurant.number_served}")
 
-restaurant.increment_number_served(100)
-print(f"Number served has incremented to: {restaurant.number_served}")
+# restaurant.increment_number_served(100)
+# print(f"Number served has incremented to: {restaurant.number_served}")
