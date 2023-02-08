@@ -34,10 +34,14 @@ class IceCreamStand(Restaurant):
             print(f"- {flavor.title()}")
 
 
-#instance for IceCreamStand
+#Creo una instancia de IceCreamStand
+#no le paso el tipo de restaurante porque ya está por default para los helados
+#le paso una lista de sabores al atributo flavors
 icecream = IceCreamStand('the gelatto king')
 icecream.flavors = ['chocolate', 'vanilla','strawberry']
 
+#con la herencia llamo al metodo que describe el restaurante
+#y llamo al metodo de la clase hijo 
 icecream.describe_restaurant()
 icecream.ice_Cream_Flavors()
 
