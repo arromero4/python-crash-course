@@ -26,6 +26,9 @@ class User:
         """that resets the value of login_attempts to 0"""
         self.login_attempts = 0
 
+class Admin(User):
+    """An administrator is a special kind of user."""
+    
 
 profile = User("Melissa", "Fararoni", 29)
 profile.describe_user()
