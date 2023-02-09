@@ -5,6 +5,7 @@ class User:
         self.last_name = last_name
         self.age = age
         self.login_attempts = 0
+        
     
     def describe_user(self):
         "describing user"
@@ -28,22 +29,56 @@ class User:
 
 class Admin(User):
     """An administrator is a special kind of user."""
-    
+    def __init__(self, first_name, last_name, age):
+        super().__init__(first_name, last_name, age)
+        #se necesita iniciar con un set de privilegios vacios
+        #llamar a clase hijo Privileges
+        self.privileges = Privileges()
 
-profile = User("Melissa", "Fararoni", 29)
-profile.describe_user()
-profile.greet_user()
 
-user = User("Gian", "Fararoni", 1)
-user.describe_user()
-user.greet_user()
+class Privileges():
+    """Mostrará los privilegios"""
+    def __init__(self, privileges = []):
+        self.privileges = privileges
 
-user.increment_login_attempts()
-user.increment_login_attempts()
-user.increment_login_attempts()
-print(f"User: {user.first_name} {user.last_name} try to login: {user.login_attempts} times")
 
-user.reset_login_attempts()
-print(f"User: {user.first_name} {user.last_name} try to login: {user.login_attempts} times")
+    def show_privileges(self):
+        """Muestra los privilegios del admin"""
+        print(f"Privileges:")
+        if self.privileges:
+            for privilege in self.privileges:
+                print(f"- {privilege}")
+        else:
+            print(f"this user has no privileges!")
+
+# profile = User("Melissa", "Fararoni", 29)
+# profile.describe_user()
+# profile.greet_user()
+
+# user = User("Gian", "Fararoni", 1)
+# user.describe_user()
+# user.greet_user()
+
+# user.increment_login_attempts()
+# user.increment_login_attempts()
+# user.increment_login_attempts()
+# print(f"User: {user.first_name} {user.last_name} try to login: {user.login_attempts} times")
+
+# user.reset_login_attempts()
+# print(f"User: {user.first_name} {user.last_name} try to login: {user.login_attempts} times")
+
+meli = Admin("Melissa", "Fararoni", 29)
+meli.describe_user()
+
+meli.privileges.show_privileges()
+
+print(f"Adding privileges...")
+meli.privileges.privileges = [
+    "can add post" ,
+    "can delete post" , 
+    "can ban user"
+]
+
+meli.privileges.show_privileges()
 
 

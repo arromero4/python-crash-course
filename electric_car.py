@@ -51,11 +51,19 @@ class Battery:
             range = 315
         print(f"Este auto puede ir cerca de {range} kilometros con carga completa.")
 
+    def upgrade_battery(self):
+        """check the battery size and set capacity to 100"""
+        if self.battery_size == 75:
+            self.battery_size = 100
+            print("Upgraded the battery to 100 kWh")
+        else:
+            print("The battery is already upgraded")
+
 
 class ElectricCar(Car):
-"""Representa aspectos de un auto, especificamente de autos electricos.
-    Inicia atributos especificos para un auto electrico.
-"""
+    """Representa aspectos de un auto, especificamente de autos electricos.
+        Inicia atributos especificos para un auto electrico.
+    """
 
     def __init__(self, make, model, year):
         """Inicia los atributos de la clase padre"""
