@@ -1,3 +1,4 @@
+#example with import
 from print_functions import print_models, show_completed_models
 
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
