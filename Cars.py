@@ -1,3 +1,4 @@
+#Example with arguments
 def car_info(manufacturer, model, **carData):
     """Información de auto"""
     carData['manufacturer'] = manufacturer
