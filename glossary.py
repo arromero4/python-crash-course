@@ -1,3 +1,4 @@
+#Dictionary and for loop
 glossary = {
     'list': 'Lists are used to store multiple items in a single variable',
     'for_loop': 'A for loop is used for iterating over a sequence',

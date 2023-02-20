@@ -1,4 +1,5 @@
 def make_album(artist_name, album_title, number_songs = None):
+    """function with while loop"""
     if number_songs:
         album = {'artist_name' : artist_name, 'album_title' : album_title, 'number_songs' : number_songs}
     else:
