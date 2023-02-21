@@ -1,0 +1,5 @@
+In Python you can learn fast
+In Python you can work with data
+In Python you can be Data Cientist
+In Python you can work with django
+
