@@ -8,8 +8,8 @@ while True:
         break
 
     with open(filename, 'a') as file_object:
-        file_object.write("Hello {name}, thank you for visiting us!\n")
-        
+        file_object.write(f"Hello {name}, thank you for visiting us!\n")
+
     print(f"Hello {name}, thank you for visiting us!")
 
 
