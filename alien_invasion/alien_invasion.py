@@ -23,6 +23,7 @@ class AlienInvasion:
 
         self.ship = Ship(self)
 
+        self.bullets = pygame.sprite.Group()
         #set the background color
         self.bg_color = (230,230,230)
 
@@ -32,6 +33,7 @@ class AlienInvasion:
 
             self._check_events()
             self.ship.update()
+            self.bullets.update()
             self._update_screen()
           
 
