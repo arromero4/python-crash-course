@@ -28,7 +28,7 @@ for repo_dict in repo_dicts:
     print(f"Updated: {repo_dict['updated_at']}")
     print(f"Description: {repo_dict['description']}")
 
-print(f"\nKeys: {len(repo_dict)}")
+#print(f"\nKeys: {len(repo_dict)}")
 
-for key in sorted(repo_dict.keys()):
+#for key in sorted(repo_dict.keys()):
     print(key)
