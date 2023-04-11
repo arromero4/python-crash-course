@@ -1,7 +1,8 @@
 import requests
 from plotly.graph_objs import Bar
 from plotly import offline
-#check if this plotly works
+
+
 # Make an API call and store the response.
 url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
 
